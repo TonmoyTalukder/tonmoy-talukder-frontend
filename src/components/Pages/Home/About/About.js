@@ -116,7 +116,7 @@ const About = () => {
 
             {/* <Divider/> */}
 
-            <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} style={{paddingTop: '15px'}}>
+            {/* <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} style={{paddingTop: '15px'}}>
                 <Grid item xs={12} sm={12} md={4}>
                     <Button style={{marginTop: "1%"}}><a className="download-resume" style={{textDecoration: 'none', color: 'gray', border: '1px solid gray', borderRadius: '5px', padding: '10px'}} href="/skills" >All About My Skills</a></Button>
                     <Divider style={{marginTop: '15px'}} />
@@ -129,7 +129,7 @@ const About = () => {
                     <Button style={{marginTop: "1%"}}><a className="download-resume" style={{textDecoration: 'none', color: 'gray', border: '1px solid gray', borderRadius: '5px', padding: '10px'}} href="/experiences" >My Experiences</a></Button>
                     <Divider style={{marginTop: '15px'}} />
                 </Grid>
-            </Grid>
+            </Grid> */}
 
             <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} style={{paddingTop: '40px'}}>
                 <Grid item xs={12} sm={12} md={6}>

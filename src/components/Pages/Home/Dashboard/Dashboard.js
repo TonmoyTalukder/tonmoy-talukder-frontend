@@ -269,11 +269,11 @@ function Dashboard(props) {
         
         <Divider />
 
-        <a style={{textDecoration: "none", color: "white"}} href="/blogs">
+        {/* <a style={{textDecoration: "none", color: "white"}} href="/blogs">
           <ListItem button>Blogs <CallMadeSharpIcon/></ListItem>
         </a>
         
-        <Divider />
+        <Divider /> */}
       </List>
     </div>
   );
@@ -315,9 +315,10 @@ function Dashboard(props) {
                   bgcolor: 'transparent',
                 }}
               >
-                <Item><a className="download-resume" style={{textDecoration: 'none', color: '#ECE9E9', border: '0px solid gray', borderRadius: '5px', padding: '10px'}} href="/skills" >All About My Skills</a></Item>
+                <Item><a className="download-resume" style={{textDecoration: 'none', color: '#ECE9E9', border: '0px solid gray', borderRadius: '5px', padding: '10px'}} href="/skills" >Skills</a></Item>
                 {/* <Item>Item 2</Item> */}
-                <Item><a className="download-resume" style={{textDecoration: 'none', color: '#ECE9E9', border: '0px solid gray', borderRadius: '5px', padding: '10px'}} href="/experiences" >My Experiences</a></Item>
+                <Item><a className="download-resume" style={{textDecoration: 'none', color: '#ECE9E9', border: '0px solid gray', borderRadius: '5px', padding: '10px'}} href="/experiences" >Experiences</a></Item>
+                <Item><a className="download-resume" style={{textDecoration: 'none', color: '#ECE9E9', border: '0px solid gray', borderRadius: '5px', padding: '10px'}} href="/blogs" >Blogs</a></Item>
               </Box>
           </Box>
         </Toolbar>

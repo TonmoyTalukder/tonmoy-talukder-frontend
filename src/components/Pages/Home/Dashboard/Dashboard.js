@@ -67,6 +67,8 @@ import FileCopyIcon from '@mui/icons-material/FileCopy';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
+import Container from '@mui/material/Container';
+
 import SummarizeIcon from '@mui/icons-material/Summarize';
 
 import './Dashboard.css';
@@ -350,7 +352,7 @@ function Dashboard(props) {
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <Toolbar id="back-to-top-anchor" />
-      {/* <HideOnScroll {...props}> */}
+      <HideOnScroll {...props}>
       <AppBar
         position="fixed"
         sx={{
@@ -430,7 +432,7 @@ function Dashboard(props) {
               <Button style={{border: '1px solid gray', backgroundColor: "white"}}><a style={{color: 'gray', textDecoration: 'none', fontWeight: '25px'}} href="/blog">Blog <RssFeedIcon/></a></Button>
         </Box> */}
       </AppBar>
-      {/* </HideOnScroll> */}
+      </HideOnScroll>
       <Box
         component="nav"
         sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}

@@ -1,0 +1,15 @@
+.formStyle {
+  width: "100%!important";
+}
+.formStyle input {
+  width: "50px";
+}
+
+@media only screen and (max-width: 599px) {
+  /* body {
+    background-color: black !important;
+  } */
+  .inputStyle {
+    width: "80vw" !important;
+  }
+}

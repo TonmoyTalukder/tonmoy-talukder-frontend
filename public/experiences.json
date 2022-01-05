@@ -1,0 +1,30 @@
+[
+    {
+        "id": "1",
+        "expName": "Mentor",
+        "orgName": "Technovation",
+        "date": "November 2021 - Present",
+        "description": "Technovation Bangladesh Chapter"
+    },
+    {
+        "id": "2",
+        "expName": "Junior Research Assistant",
+        "orgName": "Research Hub",
+        "date": "June 2021 - Present",
+        "description": "Junior Researcher of CS Research Team of Research Hub"
+    },
+    {
+        "id": "3",
+        "expName": "President",
+        "orgName": "Pushpa Child Forum",
+        "date": "October 2013 - October 2016",
+        "description": "Children Organization of World Vision Bangladesh Kalmakanda ADP of Netrakona, Mymensingh"
+    },
+    {
+        "id": "4",
+        "expName": "Boys' Scout",
+        "orgName": "Bangladesh Scout",
+        "date": "October 2012 - December 2012",
+        "description": "Member of High School Scout Team for National Camps"
+    }
+]

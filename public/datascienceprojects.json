@@ -1,0 +1,34 @@
+[
+    {
+        "id": "1",
+        "name": "AUDI Used Car EDA",
+        "photo": "https://i.ibb.co/nc8kYvG/audicar.png",
+        "projectType": "Machine Learning Model, Data Analysis, Data Visualization",
+        "objectives": "Importing necessary python packages, Reading the excel (.csv) file, Naming the new dataFrame, Finding the number of rows and columns, Descriptive Statistics of the dataset, Finding the data types and missing values, Visualizing the dataset using different plots, The top 5 selling car models in the dataset, The average selling price of the top 5 selling car models, The total sale of the top 5 selling car models, Data Set Aggregation and exploratory data analysis based on model, transmission and fuel type of the audi cars.",
+        "gitHubRepository": "https://github.com/TonmoyTalukder/audi_used_car_EDA"
+    },
+    {
+        "id": "2",
+        "name": "Heart Disease Prediction",
+        "photo": "https://i.ibb.co/XCNGkJv/Heart-Disease-Prediction.png",
+        "projectType": "Machine Learning Model",
+        "objectives": "Model Result: Model is saying 81.67 % patients has Heart Disease. About The 2nd Model: We are getting the Precision value from the model is 7.9 out of 10. What should be more near to 10. The Accuracy of the model is 81.67%. If the accuracy rate would more than 85% and the precision value is greater than 8 then we can say this model is pretty good, but the model is not what.",
+        "gitHubRepository": "https://github.com/TonmoyTalukder/Heart_Disease_Prediction"
+    },
+    {
+        "id": "3",
+        "name": "Churning Telecom Company Prediction",
+        "photo": "https://i.ibb.co/rxkQc1d/Churning-Telecom-Company.png",
+        "projectType": "Data Analysis",
+        "objectives": "Objectives: One-hot Encoding, Decision Tree Classification, Data Transformation, Cross-Validation, Grid Search, Tree diagram of the Decision Tree, Confusion Matrix, Classification report, and ROC-AUC, Explaining accuracy, precision, recall, f1 score. Outcome: Model Result:  Model is saying 90.85% customers will churn. About The Model: We are getting the Precision value from the model is 7.0 out of 10. What should be more near to 10. The Accuracy of the model is 90.85%. The accuracy rate is good enough but the precision value should be greater than 8 then we can say this model is pretty good, but the model is accurately resulting but the precision is not satisfactory.",
+        "gitHubRepository": "https://github.com/TonmoyTalukder/Churning-Telecom-Company-Prediction"
+    },
+    {
+        "id": "4",
+        "name": "Test Cricket Analysis",
+        "photo": "https://i.ibb.co/mypwptF/test-Player-Analysis.png",
+        "projectType": "Data Analysis",
+        "objectives": "Objectives: Displaying the first 10 rows of the dataframe, Explaining the meaning of each column, Finding the numbers of rows and columns in the dataframe, Finding the data statistics and checking for the data types, Checking for missing values present in the dataset or not, Renaming the column names appropriately, Remove a column from the dataframe, Splitting columns. Analysis in the Data Set: Players played for ICC, Number of the different countries are present in the dataset, Player(s) had played for the longest period of time, Player(s) had played for the shortest period of time, The player had the lowest economy rate, The player had the lowest strike rate, The player had the lowest bowling average.",
+        "gitHubRepository": "https://github.com/TonmoyTalukder/test_cricket_analysis"
+    }
+]

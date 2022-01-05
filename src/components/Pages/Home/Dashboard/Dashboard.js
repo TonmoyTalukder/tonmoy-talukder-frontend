@@ -56,6 +56,63 @@ import Fab from '@mui/material/Fab';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import Zoom from '@mui/material/Zoom';
 
+
+// 05 January 2022 Start
+import { styled, alpha } from '@mui/material/styles';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import EditIcon from '@mui/icons-material/Edit';
+import ArchiveIcon from '@mui/icons-material/Archive';
+import FileCopyIcon from '@mui/icons-material/FileCopy';
+import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+
+import SummarizeIcon from '@mui/icons-material/Summarize';
+
+import './Dashboard.css';
+
+const StyledMenu = styled((props) => (
+  <Menu
+    elevation={0}
+    anchorOrigin={{
+      vertical: 'bottom',
+      horizontal: 'right',
+    }}
+    transformOrigin={{
+      vertical: 'top',
+      horizontal: 'right',
+    }}
+    {...props}
+  />
+))(({ theme }) => ({
+  '& .MuiPaper-root': {
+    borderRadius: 6,
+    marginTop: theme.spacing(1),
+    minWidth: 180,
+    color:
+      theme.palette.mode === 'light' ? 'rgb(55, 65, 81)' : theme.palette.grey[300],
+    boxShadow:
+      'rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
+    '& .MuiMenu-list': {
+      padding: '4px 0',
+    },
+    '& .MuiMenuItem-root': {
+      '& .MuiSvgIcon-root': {
+        fontSize: 18,
+        color: theme.palette.text.secondary,
+        marginRight: theme.spacing(1.5),
+      },
+      '&:active': {
+        backgroundColor: alpha(
+          theme.palette.primary.main,
+          theme.palette.action.selectedOpacity,
+        ),
+      },
+    },
+  },
+}));
+// 05 January 2022 End
+
 // <FontAwesomeIcon icon="fa-brands fa-researchgate" />
 const drawerWidth = 240;
 
@@ -280,6 +337,15 @@ function Dashboard(props) {
 
   const container = window !== undefined ? () => window().document.body : undefined;
 
+  // 05 January 2022
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
@@ -305,7 +371,7 @@ function Dashboard(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Box>
+          <Box style={{width: '100%'}}>
               <Box
                 sx={{
                   display: 'flex',
@@ -315,11 +381,49 @@ function Dashboard(props) {
                   bgcolor: 'transparent',
                 }}
               >
-                <Item><a className="download-resume" style={{textDecoration: 'none', color: '#ECE9E9', border: '0px solid gray', borderRadius: '5px', padding: '10px'}} href="/skills" >Skills</a></Item>
+                <Item className='dashboard-app-bar-menu-large'><a className="download-resume" style={{textDecoration: 'none', color: '#ECE9E9', border: '0px solid gray', borderRadius: '5px', padding: '10px'}} href="/skills" >Skills</a></Item>
                 {/* <Item>Item 2</Item> */}
-                <Item><a className="download-resume" style={{textDecoration: 'none', color: '#ECE9E9', border: '0px solid gray', borderRadius: '5px', padding: '10px'}} href="/experiences" >Experiences</a></Item>
-                <Item><a className="download-resume" style={{textDecoration: 'none', color: '#ECE9E9', border: '0px solid gray', borderRadius: '5px', padding: '10px'}} href="/blogs" >Blogs</a></Item>
+                <Item className='dashboard-app-bar-menu-large'><a className="download-resume" style={{textDecoration: 'none', color: '#ECE9E9', border: '0px solid gray', borderRadius: '5px', padding: '10px'}} href="/experiences" >Experiences</a></Item>
+                <Item className='dashboard-app-bar-menu-large'><a className="download-resume" style={{textDecoration: 'none', color: '#ECE9E9', border: '0px solid gray', borderRadius: '5px', padding: '10px'}} href="/blogs" >Blogs</a></Item>
+                
               </Box>
+              <Box className='dashboard-app-bar-menu-small'>
+                  <div>
+                    <Button
+                      id="demo-customized-button"
+                      aria-controls={open ? 'demo-customized-menu' : undefined}
+                      aria-haspopup="true"
+                      aria-expanded={open ? 'true' : undefined}
+                      // variant="contained"
+                      style={{color: 'white'}}
+                      disableElevation
+                      onClick={handleClick}
+                      endIcon={<KeyboardArrowDownIcon />}
+                    >
+                      <SummarizeIcon/>
+                    </Button>
+                    <StyledMenu
+                      id="demo-customized-menu"
+                      MenuListProps={{
+                        'aria-labelledby': 'demo-customized-button',
+                      }}
+                      anchorEl={anchorEl}
+                      open={open}
+                      onClose={handleClose}
+                    >
+                      <MenuItem onClick={handleClose} disableRipple>
+                        <a className="download-resume" style={{textDecoration: 'none', fontWeight: 'bold', color: 'gray', border: '0px solid gray', borderRadius: '5px', padding: '10px'}} href="/skills" >Skills</a>
+                      </MenuItem>
+                      <MenuItem onClick={handleClose} disableRipple>
+                        <a className="download-resume" style={{textDecoration: 'none', fontWeight: 'bold', color: 'gray', border: '0px solid gray', borderRadius: '5px', padding: '10px'}} href="/experiences" >Experiences</a>
+                      </MenuItem>
+                      {/* <Divider sx={{ my: 0.5 }} /> */}
+                      <MenuItem onClick={handleClose} disableRipple>
+                        <a className="download-resume" style={{textDecoration: 'none', fontWeight: 'bold', color: 'gray', border: '0px solid gray', borderRadius: '5px', padding: '10px'}} href="/blogs" >Blogs</a>
+                      </MenuItem>
+                    </StyledMenu>
+                  </div>
+                </Box>
           </Box>
         </Toolbar>
         {/* <Box style={{color: "gray", display: "flex", justifyContent: "flex-end", alignContent: "center", marginTop: "-30px", paddingRight: "30px"}}>

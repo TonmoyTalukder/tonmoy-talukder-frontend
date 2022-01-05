@@ -1,0 +1,15 @@
+@media only screen and (max-width: 599px) {
+  .dashboard-app-bar-menu-large {
+    display: none;
+  }
+  .dashboard-app-bar-menu-small {
+    display: grid;
+    justify-content: end;
+    margin-top: -5vh;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .dashboard-app-bar-menu-small {
+    display: none;
+  }
+}
